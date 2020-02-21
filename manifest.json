@@ -10,7 +10,6 @@
         "128":"images/pk128.png"
 
     },
-    "permissions":["activeTab"],
     "content_scripts": [{
         "matches":["https://dsal.uchicago.edu/dictionaries/platts/*"],
         "js":["jquery.min.js","contentScript.js"]
