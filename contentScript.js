@@ -33,9 +33,9 @@ window.addEventListener(
                     )
                 }
 
-                if ($('#autocomplete-1').val().includes('ک')) {
+                if ($('#autocomplete-1').val().includes('ی')) {
                     $('#autocomplete-1').val(
-                        $('#autocomplete-1').val().replace('ک', 'ك')
+                        $('#autocomplete-1').val().replace('ی','ي')
                     )
                 }
 
@@ -52,6 +52,14 @@ window.addEventListener(
                 }
 
 
+            });
+
+            $("#autocomplete-1").on('focusout', function() {
+                if ($('#autocomplete-1').val().endsWith('ک')){
+                    $('#autocomplete-1').val(
+                        $('#autocomplete-1').val().substring(0, $('#autocomplete-1').val().length-1)+'ك'
+                    )
+                }
             });
         }
     },
